@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="touchscrub-container">
+    <video poster="https://www.html5rocks.com/en/tutorials/video/basics/poster.png">
+      <source src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm"
+              type='video/webm;codecs="vp8, vorbis"' />
+      <source src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4"
+              type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+    </video>
+    <div id="touchscrub-time" class="touchscrub-time-passive">0.0</div>
+    <div id="touchscrub-progress-bar" class="touchscrub-progress-bar-passive"></div>
+    <div class="touchscrub-scrub-direction"></div>
+    <div class="touchscrub-scrub-divider"></div>
+  </div>
+  <script type="text/javascript" src="tap.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

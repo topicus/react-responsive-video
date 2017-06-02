@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  font-family: sans-serif;
+  min-height: 0px;
+}
+
+.touchscrub-container {
+  position: relative;
+  background-color: #000;
+}
+
+.touchscrub-container video {
+  width: 100%;
+  object-fit: cover;
+}
+
+#touchscrub-progress-bar {
+  background-color: rgba(255, 0, 0, 0.9);
+  width: 0%;
+  position: absolute;
+  top: 0;
+  background-blend-mode: multiply;
+  z-index: 1;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+  transition-property: height;
+}
+
+.touchscrub-progress-bar-active {
+  height: 7px;
+}
+.touchscrub-progress-bar-passive {
+  height: 5px;
+}
+
+.touchscrub-scrub-direction {
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  background: rgba(255,0,0, 0.9);
+  height: 40px;
+}
+
+.touchscrub-scrub-divider {
+  border: 1px dashed rgba(255,255,255, 0.3);
+  left: 50%;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  display: none;
+}
+
+#touchscrub-time {
+  position: absolute;
+  top: 98%;
+  transform: translateY(-100%);
+  left: 0%;
+  margin-left: 3px;
+  text-align: center;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-property: font-size color;
+  font-weight: bold;
+}
+
+.touchscrub-time-active {
+  font-size: 23vmin;
+  color:rgba(255,255,255, 0.9);
+}
+
+.touchscrub-time-passive {
+  font-size: 4vmin;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 5px;
+  padding: 5px;
+}
